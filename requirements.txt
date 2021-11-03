@@ -51,7 +51,7 @@ parso==0.7.1
 pathtools==0.1.2
 pickleshare==0.7.5
 Pillow==7.2.0
-plotly==4.11.0
+plotly==5.3.1
 prometheus-client==0.8.0
 prompt-toolkit==3.0.7
 protobuf==3.13.0
@@ -72,7 +72,7 @@ scipy==1.5.2
 Send2Trash==1.5.0
 six==1.15.0
 sklearn==0.0
-streamlit==0.62.0
+streamlit==1.1.0
 terminado==0.9.1
 testpath==0.4.4
 threadpoolctl==2.1.0
