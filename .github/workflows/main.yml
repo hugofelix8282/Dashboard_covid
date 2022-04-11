@@ -1,0 +1,44 @@
+
+name: Teste_Pipeline
+on:
+  workflow_dispatch:
+
+
+jobs:
+    build: 
+      runs-on: ubuntu-latest
+      steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+    deploy-Dev: 
+        runs-on: ubuntu-latest
+        env:
+          name: Dev
+          url: 'hugofelix8282.github.io/portfolio01/'
+          needs: build
+        steps:
+        - name: Run a one-line script
+          run: echo Hello, world!
+
+
+
+    deploy-teste: 
+        runs-on: ubuntu-latest
+        env:
+          name: teste
+          url: 'hugofelix8282.github.io/portfolio01/'
+          needs: deploy-dev
+        steps:
+        - name: Run a one-line script
+          run: echo Hello, world!
+          
+    deploy-producao: 
+        runs-on: ubuntu-latest
+        env:
+          name: teste
+          url: 'hugofelix8282.github.io/portfolio01/'
+          needs: deploy-teste
+        steps:
+        - name: Run a one-line script
+          run: echo Hello, world!    
